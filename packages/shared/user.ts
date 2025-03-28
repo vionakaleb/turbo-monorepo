@@ -3,6 +3,7 @@ export interface User {
     totalAverageWeightRatings: number;
     numberOfRents: number;
     recentlyActive: string;
+    compositeScore?: number;
   }
   
   export class UserModel implements User {
@@ -10,7 +11,8 @@ export interface User {
       public id: string,
       public totalAverageWeightRatings: number,
       public numberOfRents: number,
-      public recentlyActive: string
+      public recentlyActive: string,
+      public compositeScore: number,
     ) {}
   }
   
