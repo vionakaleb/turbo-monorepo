@@ -1,77 +1,54 @@
-Turbo Monorepo
+# Turbo Monorepo
 
-This is a Turbo Monorepo setup that includes:
+This repository contains a **Turbo Monorepo** setup with the following components:
 
-A frontend built with Next.js
+- **Frontend**: A **Next.js** application.
+- **Backend**: An **Express.js** application.
+- **Shared**: Common utilities and code shared between the frontend and backend.
 
-A backend built with Express.js
+## Repositories
 
-Repositories
+- **Frontend Repo**: [Frontend (Next.js)](https://github.com/vionakaleb/frontend-repo)
+- **Backend Repo**: [Backend (Express.js)](https://github.com/vionakaleb/backend-repo)
 
-Frontend Repo: Frontend (Next.js)
+## Project Structure
 
-Backend Repo: Backend (Express.js)
+/turbo-monorepo /apps /frontend # Next.js frontend /backend # Express.js backend /packages /shared # Shared utilities and types
 
-Project Structure
+## Setup Instructions
 
-/turbo-monorepo
-  /apps
-    /frontend   # Next.js frontend
-    /backend    # Express.js backend
-  /packages
-    /shared     # Shared utilities and types
+### Prerequisites
+Before you start, make sure you have the following installed:
 
-Setup Instructions
+- Node.js (latest LTS version recommended)
+- Yarn (or npm/pnpm)
+- Turbo CLI
 
-Prerequisites
+### Install Dependencies
 
-Node.js (latest LTS recommended)
+In the root directory of the monorepo, run:
 
-Yarn (or npm/pnpm)
-
-Turbo CLI
-
-Install Dependencies
-
-Run the following command in the root directory:
-
+```bash
 yarn install
 
-Running the Development Servers
+This will install the necessary dependencies for both frontend and backend projects.
 
+Running the Development Servers
 Backend (Express.js)
+To start the backend server, navigate to the backend directory and run:
 
 yarn dev
 
-Backend runs on: http://localhost:5000
+The backend will run on: http://localhost:5000
 
 Frontend (Next.js)
+To start the frontend server, navigate to the frontend directory and run:
 
 yarn dev
 
-Frontend runs on: http://localhost:3000
+The frontend will run on: http://localhost:3000
 
 Build Project
+To build the entire project, run the following command in the root directory:
 
 yarn build
-
-Production Start
-
-yarn start
-
-Environment Variables
-
-Create a .env file in both frontend and backend directories.
-
-Backend .env
-
-PORT=5000
-HOST_URL=http://localhost:5000
-
-Frontend .env
-
-NEXT_PUBLIC_API_URL=http://localhost:5000
-
-Additional Information
-
-This monorepo uses Turbo for optimized builds and caching. More details can be found in the Turbo documentation.
